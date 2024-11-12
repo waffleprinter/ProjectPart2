@@ -101,7 +101,24 @@ public class Money
             value = 0;
         return value;
     }
-    // ADD LINES FOR TASK #2 HERE
-    // Document and write an equals method
-    // Document and write a toString method
+
+    /**
+     The subtract method
+     @param otherMoney another Money object.
+     @return boolean of whether both Money objects contain identical information
+     */
+    public boolean equals(Money otherMoney)
+    {
+        return dollars == otherMoney.dollars && cents == otherMoney.cents;
+    }
+
+    /**
+     The toString method
+     @return Information about the money.
+     */
+    public String toString()
+    {
+        if (cents < 10) return "$" + dollars + ".0" + cents;
+        else return "$" + dollars + "." + cents;
+    }
 }
