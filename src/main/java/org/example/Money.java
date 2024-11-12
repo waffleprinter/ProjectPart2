@@ -28,8 +28,16 @@ public class Money
             cents = allCents % 100;
         }
     }
-    // ADD LINES FOR TASK #1 HERE
-    // Document and write a copy constructor
+
+    /**
+     Copy constructor
+     @param otherMoney another Money object.
+     */
+    public Money(Money otherMoney) {
+        dollars = otherMoney.dollars;
+        cents = otherMoney.cents;
+    }
+
     /**
      The add method
      @param otherAmount The amount of money to add.
