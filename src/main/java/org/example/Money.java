@@ -7,8 +7,10 @@ public class Money
 {
     // The number of dollars
     private long dollars;
+
     // The number of cents
     private long cents;
+
     /**
      Constructor
      @param amount The amount in decimal format.
@@ -17,8 +19,7 @@ public class Money
     {
         if (amount < 0)
         {
-            System.out.println("Error: Negative amounts " +
-                    "of money are not allowed.");
+            System.out.println("Error: Negative amounts " + "of money are not allowed.");
             System.exit(0);
         }
         else
@@ -41,25 +42,25 @@ public class Money
     /**
      The add method
      @param otherAmount The amount of money to add.
-     @return The sum of the calling Money object
-     and the parameter Money object.
+     @return The sum of the calling Money object and the parameter Money object.
      */
     public Money add(Money otherAmount)
     {
         Money sum = new Money(0);
+
         sum.cents = this.cents + otherAmount.cents;
+
         long carryDollars = sum.cents / 100;
+
         sum.cents = sum.cents % 100;
-        sum.dollars = this.dollars +
-                otherAmount.dollars +
-                carryDollars;
+        sum.dollars = this.dollars + otherAmount.dollars + carryDollars;
+
         return sum;
     }
     /**
      The subtract method
      @param amount The amount of money to subtract.
-     @return The difference between the calling Money
-     object and the parameter Money object.
+     @return The difference between the calling Money object and the parameter Money object.
      */
     public Money subtract (Money amount)
     {
@@ -69,21 +70,18 @@ public class Money
             this.dollars = this.dollars - 1;
             this.cents = this.cents + 100;
         }
+
         difference.dollars = this.dollars - amount.dollars;
         difference.cents = this.cents - amount.cents;
+
         return difference;
     }
     /**
      The compareTo method
      @param amount The amount of money to compare against.
-     @return -1 if the dollars and the cents of the
-     calling object are less than the dollars and
-     the cents of the parameter object.
-     0 if the dollars and the cents of the calling
-     object are equal to the dollars and cents of
-     the parameter object.
-     1 if the dollars and the cents of the calling
-     object are more than the dollars and the
+     @return -1 if the dollars and the cents of the calling object are less than the dollars and the cents of the
+     parameter object. 0 if the dollars and the cents of the calling object are equal to the dollars and cents of
+     the parameter object. 1 if the dollars and the cents of the calling object are more than the dollars and the
      cents of the parameter object.
      */
     public int compareTo(Money amount)
