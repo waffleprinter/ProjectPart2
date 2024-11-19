@@ -2,8 +2,8 @@ package org.example;
 
 public class CreditCard {
     private Money balance = new Money(0);
-    private Money creditLimit;
-    private Person owner;
+    private final Money creditLimit;
+    private final Person owner;
 
     CreditCard(Person newCardHolder, Money limit) {
         owner = newCardHolder;
