@@ -1,6 +1,7 @@
 package org.example;
 
 /**
+ @author Jacques-Conrad Calagui-Painchaud 6298805
  This class defines a credit card with a balance, credit limit, and owner.
  */
 public class CreditCard {
