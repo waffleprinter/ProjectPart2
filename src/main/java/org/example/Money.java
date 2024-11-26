@@ -32,6 +32,7 @@ public class Money
 
     /**
      Copy constructor
+     @author Jacques-Conrad Calagui-Painchaud 6298805
      @param otherMoney another Money object.
      */
     public Money(Money otherMoney) {
@@ -102,6 +103,7 @@ public class Money
 
     /**
      The subtract method
+     @author Jacques-Conrad Calagui-Painchaud 6298805
      @param otherMoney another Money object.
      @return boolean of whether both Money objects contain identical information
      */
@@ -112,6 +114,7 @@ public class Money
 
     /**
      The toString method
+     @author Jacques-Conrad Calagui-Painchaud 6298805
      @return Information about the money.
      */
     public String toString()
